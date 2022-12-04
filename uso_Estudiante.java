@@ -6,7 +6,7 @@ public class uso_Estudiante {
 
         Scanner entrada = new Scanner(System.in);
         int opcion = 1;
-        Estudiante[] alumnos = new Estudiante[4];
+        Estudiante[] alumnos = new Estudiante[2];
         for(int i = 0; i < alumnos.length; i++){
             alumnos[i] = new Estudiante();//se inicializan con el constructor por defecto
         }

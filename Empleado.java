@@ -11,6 +11,10 @@ public class Empleado {
         altaContrato = calendario.getTime();
     }
 
+    public Empleado(String nomb){
+        this(nomb,50000.65,2019,10,10);//llama al otro constructor
+    }
+
     private String nombre;
     private double sueldo;
     private Date altaContrato;
@@ -31,7 +35,7 @@ public class Empleado {
     public void setSueldo(double sueldo) {
         //double aumento = this.sueldo*porcentaje/100;
         //this.sueldo += aumento;
-        this.sueldo = sueldo;
+        this.sueldo = this.sueldo + this.sueldo*sueldo/100.0;
     }
 
     public Date getAltaContrato() {

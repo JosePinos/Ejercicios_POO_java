@@ -18,10 +18,10 @@ public class Uso_empleado {
         System.out.println(emp_2.getNombre() +" gana " + emp_2.getSueldo() + " dóllars " +
                 " y tiene una fecha de alta de: " + emp_2.getAltaContrato());
         */
-        Empleado[] empleados = new Empleado[3];
+        Empleado[] empleados = new Empleado[4];
 
         System.out.println("Ingrese los datos de los empleados");
-       for(int i = 0; i < empleados.length; i++){
+       for(int i = 0; i < empleados.length-1; i++){
            System.out.print("Ingrese el nombre del empleado: ");
            String nombre = entrada.nextLine();
 
@@ -42,6 +42,16 @@ public class Uso_empleado {
            System.out.println("\n");
        }
 
+       empleados[3] = new Empleado("Compayito");
+
+        System.out.println("\nAumente el sueldo de los empleados");
+        for(int i = 0; i < empleados.length; i++){
+            double sueldo_aux;
+            System.out.print("Aumento: ");
+            sueldo_aux = entrada.nextDouble();
+
+            empleados[i].setSueldo(sueldo_aux);
+        }
 
         System.out.println("\n Los empleados ingresados fueron");
        for(int i = 0; i < empleados.length; i++){
